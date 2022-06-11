@@ -1,0 +1,50 @@
+<script>
+
+    "use strict";
+
+    function randomDiap(n,m) {
+            return Math.floor(Math.random()*(m-n+1))+n;
+    }
+
+    function mood(colorsCount) {
+        var colors=[ '', 'красный', 'оранжевый', 'жёлтый', 'зелёный', 'голубой', 'синий', 'фиолетовый' ];
+        var hash={};
+        var i=0;
+        console.log( 'цветов: ' + colorsCount );
+        while (i <colorsCount) {
+            var n=randomDiap(1,7);
+            var colorName=colors[n];
+
+            if (!(colorName in hash)){
+               hash[colorName] = true;
+               i++;
+               console.log(colorName);
+              }
+            
+        }
+    }
+
+    mood(3);
+
+//     function random(n,m) {
+//             return Math.floor(Math.random()*(m-n+1))+n;
+//     }
+ 
+//  function randomcolor(colCount) {
+//         var massiv=['', 'red','black', 'yellow','white', 'blue', 'green','beige', 'purple'];
+//         var hash={};
+//         console.log( 'цветов: ' + colCount );
+//         var j=0;
+//         while(j<colCount){
+//             var n = random(1,8);
+//             var colName=massiv[n];
+//             if (!(colName in hash)){
+//                hash[colName] = true;
+//                j++;
+//                console.log(colName);
+//               }
+//         }
+//     }
+//     randomcolor(3);
+
+</script>
